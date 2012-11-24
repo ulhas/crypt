@@ -1,0 +1,284 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		50DA51421660F32800FE50B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DA51411660F32800FE50B6 /* UIKit.framework */; };
+		50DA51441660F32800FE50B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DA51431660F32800FE50B6 /* Foundation.framework */; };
+		50DA51461660F32800FE50B6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DA51451660F32800FE50B6 /* CoreGraphics.framework */; };
+		50DA51481660F32800FE50B6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DA51471660F32800FE50B6 /* CoreData.framework */; };
+		50DA514E1660F32800FE50B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50DA514C1660F32800FE50B6 /* InfoPlist.strings */; };
+		50DA51501660F32800FE50B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DA514F1660F32800FE50B6 /* main.m */; };
+		50DA51541660F32800FE50B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DA51531660F32800FE50B6 /* AppDelegate.m */; };
+		50DA51571660F32800FE50B6 /* Crypt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50DA51551660F32800FE50B6 /* Crypt.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		50DA513D1660F32800FE50B6 /* Crypt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crypt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		50DA51411660F32800FE50B6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		50DA51431660F32800FE50B6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		50DA51451660F32800FE50B6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		50DA51471660F32800FE50B6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		50DA514B1660F32800FE50B6 /* Crypt-Info.plist */ = {isa = PBXFileReference; path = "Crypt-Info.plist"; sourceTree = "<group>"; };
+		50DA514D1660F32800FE50B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		50DA514F1660F32800FE50B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		50DA51511660F32800FE50B6 /* Crypt-Prefix.pch */ = {isa = PBXFileReference; path = "Crypt-Prefix.pch"; sourceTree = "<group>"; };
+		50DA51521660F32800FE50B6 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		50DA51531660F32800FE50B6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		50DA51561660F32800FE50B6 /* Crypt.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Crypt.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50DA513A1660F32800FE50B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50DA51421660F32800FE50B6 /* UIKit.framework in Frameworks */,
+				50DA51441660F32800FE50B6 /* Foundation.framework in Frameworks */,
+				50DA51461660F32800FE50B6 /* CoreGraphics.framework in Frameworks */,
+				50DA51481660F32800FE50B6 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		50DA51321660F32700FE50B6 = {
+			isa = PBXGroup;
+			children = (
+				50DA51491660F32800FE50B6 /* Crypt */,
+				50DA51401660F32800FE50B6 /* Frameworks */,
+				50DA513E1660F32800FE50B6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		50DA513E1660F32800FE50B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50DA513D1660F32800FE50B6 /* Crypt.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50DA51401660F32800FE50B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50DA51411660F32800FE50B6 /* UIKit.framework */,
+				50DA51431660F32800FE50B6 /* Foundation.framework */,
+				50DA51451660F32800FE50B6 /* CoreGraphics.framework */,
+				50DA51471660F32800FE50B6 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		50DA51491660F32800FE50B6 /* Crypt */ = {
+			isa = PBXGroup;
+			children = (
+				50DA51521660F32800FE50B6 /* AppDelegate.h */,
+				50DA51531660F32800FE50B6 /* AppDelegate.m */,
+				50DA51551660F32800FE50B6 /* Crypt.xcdatamodeld */,
+				50DA514A1660F32800FE50B6 /* Supporting Files */,
+			);
+			path = Crypt;
+			sourceTree = "<group>";
+		};
+		50DA514A1660F32800FE50B6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				50DA514B1660F32800FE50B6 /* Crypt-Info.plist */,
+				50DA514C1660F32800FE50B6 /* InfoPlist.strings */,
+				50DA514F1660F32800FE50B6 /* main.m */,
+				50DA51511660F32800FE50B6 /* Crypt-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50DA513C1660F32800FE50B6 /* Crypt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50DA515A1660F32800FE50B6 /* Build configuration list for PBXNativeTarget "Crypt" */;
+			buildPhases = (
+				50DA51391660F32800FE50B6 /* Sources */,
+				50DA513A1660F32800FE50B6 /* Frameworks */,
+				50DA513B1660F32800FE50B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Crypt;
+			productName = Crypt;
+			productReference = 50DA513D1660F32800FE50B6 /* Crypt.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50DA51341660F32700FE50B6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 50DA51371660F32700FE50B6 /* Build configuration list for PBXProject "Crypt" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 50DA51321660F32700FE50B6;
+			productRefGroup = 50DA513E1660F32800FE50B6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50DA513C1660F32800FE50B6 /* Crypt */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		50DA513B1660F32800FE50B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50DA514E1660F32800FE50B6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50DA51391660F32800FE50B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50DA51501660F32800FE50B6 /* main.m in Sources */,
+				50DA51541660F32800FE50B6 /* AppDelegate.m in Sources */,
+				50DA51571660F32800FE50B6 /* Crypt.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		50DA514C1660F32800FE50B6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50DA514D1660F32800FE50B6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		50DA51581660F32800FE50B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		50DA51591660F32800FE50B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		50DA515B1660F32800FE50B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Crypt/Crypt-Prefix.pch";
+				INFOPLIST_FILE = "Crypt/Crypt-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		50DA515C1660F32800FE50B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Crypt/Crypt-Prefix.pch";
+				INFOPLIST_FILE = "Crypt/Crypt-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50DA51371660F32700FE50B6 /* Build configuration list for PBXProject "Crypt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50DA51581660F32800FE50B6 /* Debug */,
+				50DA51591660F32800FE50B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50DA515A1660F32800FE50B6 /* Build configuration list for PBXNativeTarget "Crypt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50DA515B1660F32800FE50B6 /* Debug */,
+				50DA515C1660F32800FE50B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		50DA51551660F32800FE50B6 /* Crypt.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				50DA51561660F32800FE50B6 /* Crypt.xcdatamodel */,
+			);
+			currentVersion = 50DA51561660F32800FE50B6 /* Crypt.xcdatamodel */;
+			path = Crypt.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 50DA51341660F32700FE50B6 /* Project object */;
+}
