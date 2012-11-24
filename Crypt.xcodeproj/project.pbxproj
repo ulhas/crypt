@@ -15,6 +15,10 @@
 		50DA51501660F32800FE50B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DA514F1660F32800FE50B6 /* main.m */; };
 		50DA51541660F32800FE50B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DA51531660F32800FE50B6 /* AppDelegate.m */; };
 		50DA51571660F32800FE50B6 /* Crypt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50DA51551660F32800FE50B6 /* Crypt.xcdatamodeld */; };
+		50DA515E1660F4B100FE50B6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50DA515D1660F4B100FE50B6 /* Security.framework */; };
+		50DA51621660F4EA00FE50B6 /* CryptTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DA51601660F4EA00FE50B6 /* CryptTestViewController.m */; };
+		50DA51631660F4EA00FE50B6 /* CryptTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50DA51611660F4EA00FE50B6 /* CryptTestViewController.xib */; };
+		50DA51671660F73600FE50B6 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DA51661660F73600FE50B6 /* DatabaseManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,13 +27,19 @@
 		50DA51431660F32800FE50B6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		50DA51451660F32800FE50B6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		50DA51471660F32800FE50B6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		50DA514B1660F32800FE50B6 /* Crypt-Info.plist */ = {isa = PBXFileReference; path = "Crypt-Info.plist"; sourceTree = "<group>"; };
+		50DA514B1660F32800FE50B6 /* Crypt-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Crypt-Info.plist"; sourceTree = "<group>"; };
 		50DA514D1660F32800FE50B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		50DA514F1660F32800FE50B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		50DA51511660F32800FE50B6 /* Crypt-Prefix.pch */ = {isa = PBXFileReference; path = "Crypt-Prefix.pch"; sourceTree = "<group>"; };
-		50DA51521660F32800FE50B6 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		50DA51511660F32800FE50B6 /* Crypt-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Crypt-Prefix.pch"; sourceTree = "<group>"; };
+		50DA51521660F32800FE50B6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		50DA51531660F32800FE50B6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		50DA51561660F32800FE50B6 /* Crypt.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Crypt.xcdatamodel; sourceTree = "<group>"; };
+		50DA515D1660F4B100FE50B6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		50DA515F1660F4EA00FE50B6 /* CryptTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptTestViewController.h; sourceTree = "<group>"; };
+		50DA51601660F4EA00FE50B6 /* CryptTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CryptTestViewController.m; sourceTree = "<group>"; };
+		50DA51611660F4EA00FE50B6 /* CryptTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CryptTestViewController.xib; sourceTree = "<group>"; };
+		50DA51651660F73600FE50B6 /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
+		50DA51661660F73600FE50B6 /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50DA515E1660F4B100FE50B6 /* Security.framework in Frameworks */,
 				50DA51421660F32800FE50B6 /* UIKit.framework in Frameworks */,
 				50DA51441660F32800FE50B6 /* Foundation.framework in Frameworks */,
 				50DA51461660F32800FE50B6 /* CoreGraphics.framework in Frameworks */,
@@ -67,6 +78,7 @@
 		50DA51401660F32800FE50B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				50DA515D1660F4B100FE50B6 /* Security.framework */,
 				50DA51411660F32800FE50B6 /* UIKit.framework */,
 				50DA51431660F32800FE50B6 /* Foundation.framework */,
 				50DA51451660F32800FE50B6 /* CoreGraphics.framework */,
@@ -81,7 +93,9 @@
 				50DA51521660F32800FE50B6 /* AppDelegate.h */,
 				50DA51531660F32800FE50B6 /* AppDelegate.m */,
 				50DA51551660F32800FE50B6 /* Crypt.xcdatamodeld */,
+				50DA51641660F53C00FE50B6 /* Crypt Test View Controller */,
 				50DA514A1660F32800FE50B6 /* Supporting Files */,
+				50DA51681660F73A00FE50B6 /* Database Manager */,
 			);
 			path = Crypt;
 			sourceTree = "<group>";
@@ -95,6 +109,25 @@
 				50DA51511660F32800FE50B6 /* Crypt-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		50DA51641660F53C00FE50B6 /* Crypt Test View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				50DA515F1660F4EA00FE50B6 /* CryptTestViewController.h */,
+				50DA51601660F4EA00FE50B6 /* CryptTestViewController.m */,
+				50DA51611660F4EA00FE50B6 /* CryptTestViewController.xib */,
+			);
+			name = "Crypt Test View Controller";
+			sourceTree = "<group>";
+		};
+		50DA51681660F73A00FE50B6 /* Database Manager */ = {
+			isa = PBXGroup;
+			children = (
+				50DA51651660F73600FE50B6 /* DatabaseManager.h */,
+				50DA51661660F73600FE50B6 /* DatabaseManager.m */,
+			);
+			name = "Database Manager";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50DA514E1660F32800FE50B6 /* InfoPlist.strings in Resources */,
+				50DA51631660F4EA00FE50B6 /* CryptTestViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +195,8 @@
 				50DA51501660F32800FE50B6 /* main.m in Sources */,
 				50DA51541660F32800FE50B6 /* AppDelegate.m in Sources */,
 				50DA51571660F32800FE50B6 /* Crypt.xcdatamodeld in Sources */,
+				50DA51621660F4EA00FE50B6 /* CryptTestViewController.m in Sources */,
+				50DA51671660F73600FE50B6 /* DatabaseManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
