@@ -10,6 +10,9 @@
 
 @interface CryptTestViewController : UIViewController
 
+@property (nonatomic, strong) IBOutlet UITextField *uiEncryptTextField;
+@property (nonatomic, strong) IBOutlet UITextField *uiDecryptTextField;
+
 - (IBAction)encryptButtonClicked:(UIButton *)sender;
 - (IBAction)decryptButtonClicked:(UIButton *)sender;
 

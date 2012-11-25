@@ -11,5 +11,6 @@
 @interface DatabaseManager : NSObject
 
 - (DatabaseManager *)sharedManager;
+@property (nonatomic, assign) NSManagedObjectContext *managedObjectContext;
 
 @end

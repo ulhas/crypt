@@ -19,6 +19,8 @@
 		50DA51621660F4EA00FE50B6 /* CryptTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DA51601660F4EA00FE50B6 /* CryptTestViewController.m */; };
 		50DA51631660F4EA00FE50B6 /* CryptTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50DA51611660F4EA00FE50B6 /* CryptTestViewController.xib */; };
 		50DA51671660F73600FE50B6 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DA51661660F73600FE50B6 /* DatabaseManager.m */; };
+		845EAC231661D9E300C4C1CA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 845EAC221661D9E300C4C1CA /* Default-568h@2x.png */; };
+		845EAC271661E10300C4C1CA /* CryptManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 845EAC261661E10300C4C1CA /* CryptManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,9 @@
 		50DA51611660F4EA00FE50B6 /* CryptTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CryptTestViewController.xib; sourceTree = "<group>"; };
 		50DA51651660F73600FE50B6 /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
 		50DA51661660F73600FE50B6 /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
+		845EAC221661D9E300C4C1CA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		845EAC251661E10300C4C1CA /* CryptManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptManager.h; sourceTree = "<group>"; };
+		845EAC261661E10300C4C1CA /* CryptManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CryptManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +66,7 @@
 		50DA51321660F32700FE50B6 = {
 			isa = PBXGroup;
 			children = (
+				845EAC221661D9E300C4C1CA /* Default-568h@2x.png */,
 				50DA51491660F32800FE50B6 /* Crypt */,
 				50DA51401660F32800FE50B6 /* Frameworks */,
 				50DA513E1660F32800FE50B6 /* Products */,
@@ -96,6 +102,7 @@
 				50DA51641660F53C00FE50B6 /* Crypt Test View Controller */,
 				50DA514A1660F32800FE50B6 /* Supporting Files */,
 				50DA51681660F73A00FE50B6 /* Database Manager */,
+				845EAC241661E0DE00C4C1CA /* Crypt Manager */,
 			);
 			path = Crypt;
 			sourceTree = "<group>";
@@ -128,6 +135,15 @@
 				50DA51661660F73600FE50B6 /* DatabaseManager.m */,
 			);
 			name = "Database Manager";
+			sourceTree = "<group>";
+		};
+		845EAC241661E0DE00C4C1CA /* Crypt Manager */ = {
+			isa = PBXGroup;
+			children = (
+				845EAC251661E10300C4C1CA /* CryptManager.h */,
+				845EAC261661E10300C4C1CA /* CryptManager.m */,
+			);
+			name = "Crypt Manager";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +198,7 @@
 			files = (
 				50DA514E1660F32800FE50B6 /* InfoPlist.strings in Resources */,
 				50DA51631660F4EA00FE50B6 /* CryptTestViewController.xib in Resources */,
+				845EAC231661D9E300C4C1CA /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +214,7 @@
 				50DA51571660F32800FE50B6 /* Crypt.xcdatamodeld in Sources */,
 				50DA51621660F4EA00FE50B6 /* CryptTestViewController.m in Sources */,
 				50DA51671660F73600FE50B6 /* DatabaseManager.m in Sources */,
+				845EAC271661E10300C4C1CA /* CryptManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +283,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Crypt/Crypt-Prefix.pch";
 				INFOPLIST_FILE = "Crypt/Crypt-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -276,6 +295,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Crypt/Crypt-Prefix.pch";
 				INFOPLIST_FILE = "Crypt/Crypt-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -300,6 +320,7 @@
 				50DA515C1660F32800FE50B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -7,6 +7,7 @@
 //
 
 #import "CryptTestViewController.h"
+#import "CryptManager.h"
 
 @implementation CryptTestViewController
 
@@ -52,7 +53,18 @@
 
 - (IBAction)encryptButtonClicked:(UIButton *)sender
 {
+    if ([self.uiEncryptTextField.text isEqualToString:@""])
+        return;
     
+    NSLog(@"Text : %@", self.uiEncryptTextField.text);
+    
+    NSError *error;
+    NSData *iv;
+    NSData *salt;
+    
+    NSData *_encryptedData = [CryptManager encryptedDataForString:self.uiEncryptTextField.text initializationVector:&iv salt:&salt andError:&error];
+    
+    NSLog(@"Encrypted Data : %@/n/n/nIV : %@/n/n/nSalt : %@/n/n/n Error : %@", _encryptedData, iv, salt, error);
 }
 
 - (IBAction)decryptButtonClicked:(UIButton *)sender;

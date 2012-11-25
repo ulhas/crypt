@@ -9,9 +9,6 @@
 #import "AppDelegate.h"
 #import "CryptTestViewController.h"
 
-#import <CommonCrypto/CommonCryptor.h>
-#import <CommonCrypto/CommonKeyDerivation.h>
-
 @interface AppDelegate ()
 
 - (void)setupCryptTestViewController;
@@ -25,20 +22,10 @@
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 
-- (void)test
-{
-    NSString *password = @"ABC";
-    char keyPtr[kCCKeySizeAES128];
-    BOOL _key = [password getCString:keyPtr maxLength:sizeof(keyPtr) encoding:NSUTF8StringEncoding];
-    NSLog(@"%i", _key);
-}
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    
-    [self test];
     
     [self setupCryptTestViewController];
     
