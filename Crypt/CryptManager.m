@@ -13,8 +13,7 @@
 
 static NSString *test = @"testPassword";
 
-NSString * const
-kRNCryptManagerErrorDomain = @"com.test.crypt";
+NSString * const kCryptManagerErrorDomain = @"com.test.crypt";
 
 const CCAlgorithm kAlgorithm = kCCAlgorithmAES128;
 const NSUInteger kAlgorithmKeySize = kCCKeySizeAES128;
@@ -65,7 +64,10 @@ const NSUInteger kPBKDFRounds = 10000;
     return derivedKey;
 }
 
-+ (NSData *)encryptedDataForString:(NSString *)plainText initializationVector:(NSData *__autoreleasing *)iv salt:(NSData *__autoreleasing *)salt andError:(NSError *__autoreleasing *)error
++ (NSData *)encryptedDataForData:(NSData *)data
+                 initializationVector:(NSData *__autoreleasing *)iv
+                                 salt:(NSData *__autoreleasing *)salt
+                             andError:(NSError *__autoreleasing *)error
 {
     NSAssert(iv, @"IV must not be NULL");
     NSAssert(salt, @"salt must not be NULL");
@@ -74,8 +76,6 @@ const NSUInteger kPBKDFRounds = 10000;
     *salt = [self randomDataOfLength:kPBKDFSaltSize];
     
     NSData *key = [self AESKeyForPassword:test salt:*salt];
-    
-    NSData *data = [plainText dataUsingEncoding:NSUTF8StringEncoding]; //convert string into the data
     
     size_t outLength;
     NSMutableData *
@@ -100,7 +100,7 @@ const NSUInteger kPBKDFRounds = 10000;
     }
     else {
         if (error) {
-            *error = [NSError errorWithDomain:kRNCryptManagerErrorDomain
+            *error = [NSError errorWithDomain:kCryptManagerErrorDomain
                                          code:result
                                      userInfo:nil];
         }
@@ -108,6 +108,47 @@ const NSUInteger kPBKDFRounds = 10000;
     }
     
     return cipherData;
+}
+
++ (NSData *)decryptedDataForData:(NSData *)data
+            initializationVector:(NSData *)iv
+                            salt:(NSData *)salt
+                        andError:(NSError **)error {
+    
+    NSData *key = [self AESKeyForPassword:test salt:salt];
+    
+    size_t outLength;
+    NSMutableData *
+    decryptedData = [NSMutableData dataWithLength:data.length];
+    CCCryptorStatus
+    result = CCCrypt(kCCDecrypt, // operation
+                     kAlgorithm, // Algorithm
+                     kCCOptionPKCS7Padding, // options
+                     key.bytes, // key
+                     key.length, // keylength
+                     iv.bytes,// iv
+                     data.bytes, // dataIn
+                     data.length, // dataInLength,
+                     decryptedData.mutableBytes, // dataOut
+                     decryptedData.length, // dataOutAvailable
+                     &outLength); // dataOutMoved
+    
+    if (result == kCCSuccess) {
+        [decryptedData setLength:outLength];
+    }
+    else {
+        if (result != kCCSuccess) {
+            if (error) {
+                *error = [NSError
+                          errorWithDomain:kCryptManagerErrorDomain
+                          code:result
+                          userInfo:nil];
+            }
+            return nil;
+        }
+    }
+    
+    return decryptedData;
 }
 
 @end

@@ -10,10 +10,14 @@
 
 @interface CryptManager : NSObject
 
-+ (NSData *)encryptedDataForString:(NSString *)plainText
++ (NSData *)encryptedDataForData:(NSData *)data
               initializationVector:(NSData **)iv
                               salt:(NSData **)salt
                           andError:(NSError **)error;
 
++ (NSData *)decryptedDataForData:(NSData *)data
+            initializationVector:(NSData *)iv
+                            salt:(NSData *)salt
+                        andError:(NSError **)error;
 
 @end

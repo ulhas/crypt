@@ -56,15 +56,32 @@
     if ([self.uiEncryptTextField.text isEqualToString:@""])
         return;
     
-    NSLog(@"Text : %@", self.uiEncryptTextField.text);
+    NSLog(@"Plain Text : %@", self.uiEncryptTextField.text);
     
     NSError *error;
     NSData *iv;
     NSData *salt;
     
-    NSData *_encryptedData = [CryptManager encryptedDataForString:self.uiEncryptTextField.text initializationVector:&iv salt:&salt andError:&error];
+    NSData *_plainData = [self.uiEncryptTextField.text dataUsingEncoding:NSUTF8StringEncoding];
     
-    NSLog(@"Encrypted Data : %@/n/n/nIV : %@/n/n/nSalt : %@/n/n/n Error : %@", _encryptedData, iv, salt, error);
+    NSData *_encryptedData = [CryptManager encryptedDataForData:_plainData
+                                                initializationVector:&iv
+                                                                salt:&salt
+                                                            andError:&error];
+    
+    NSLog(@"Encrypted Data : %@/n/n/nIV : %@/n/n/nSalt : %@/n/n/nError : %@", _encryptedData, iv, salt, error);
+    
+    error = nil;
+    
+    NSData *_decryptedData = [CryptManager decryptedDataForData:_encryptedData
+                                           initializationVector:iv
+                                                           salt:salt
+                                                       andError:&error];
+    
+    NSLog(@"Decrypted Data : %@/n/n/nIV : %@/n/n/nSalt : %@/n/n/nError : %@", _decryptedData, iv, salt, error);
+    
+    NSString *_string = [[NSString alloc] initWithData:_decryptedData encoding:NSUTF8StringEncoding];
+    NSLog(@"Plain String : %@", _string);
 }
 
 - (IBAction)decryptButtonClicked:(UIButton *)sender;

@@ -21,6 +21,7 @@
 		50DA51671660F73600FE50B6 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DA51661660F73600FE50B6 /* DatabaseManager.m */; };
 		845EAC231661D9E300C4C1CA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 845EAC221661D9E300C4C1CA /* Default-568h@2x.png */; };
 		845EAC271661E10300C4C1CA /* CryptManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 845EAC261661E10300C4C1CA /* CryptManager.m */; };
+		845EAC2A1661EA2D00C4C1CA /* Crypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 845EAC291661EA2D00C4C1CA /* Crypt.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,8 @@
 		845EAC221661D9E300C4C1CA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		845EAC251661E10300C4C1CA /* CryptManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptManager.h; sourceTree = "<group>"; };
 		845EAC261661E10300C4C1CA /* CryptManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CryptManager.m; sourceTree = "<group>"; };
+		845EAC281661EA2D00C4C1CA /* Crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crypt.h; sourceTree = "<group>"; };
+		845EAC291661EA2D00C4C1CA /* Crypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Crypt.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,7 @@
 				50DA514A1660F32800FE50B6 /* Supporting Files */,
 				50DA51681660F73A00FE50B6 /* Database Manager */,
 				845EAC241661E0DE00C4C1CA /* Crypt Manager */,
+				845EAC2B1661EA3900C4C1CA /* Managed Object Models */,
 			);
 			path = Crypt;
 			sourceTree = "<group>";
@@ -144,6 +148,23 @@
 				845EAC261661E10300C4C1CA /* CryptManager.m */,
 			);
 			name = "Crypt Manager";
+			sourceTree = "<group>";
+		};
+		845EAC2B1661EA3900C4C1CA /* Managed Object Models */ = {
+			isa = PBXGroup;
+			children = (
+				845EAC2C1661EA4400C4C1CA /* Crypt */,
+			);
+			name = "Managed Object Models";
+			sourceTree = "<group>";
+		};
+		845EAC2C1661EA4400C4C1CA /* Crypt */ = {
+			isa = PBXGroup;
+			children = (
+				845EAC281661EA2D00C4C1CA /* Crypt.h */,
+				845EAC291661EA2D00C4C1CA /* Crypt.m */,
+			);
+			name = Crypt;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +236,7 @@
 				50DA51621660F4EA00FE50B6 /* CryptTestViewController.m in Sources */,
 				50DA51671660F73600FE50B6 /* DatabaseManager.m in Sources */,
 				845EAC271661E10300C4C1CA /* CryptManager.m in Sources */,
+				845EAC2A1661EA2D00C4C1CA /* Crypt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
