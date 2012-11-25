@@ -8,6 +8,8 @@
 
 #import "CryptTestViewController.h"
 #import "CryptManager.h"
+#import "Crypt.h"
+#import "DatabaseManager.h"
 
 @implementation CryptTestViewController
 
@@ -56,6 +58,9 @@
     if ([self.uiEncryptTextField.text isEqualToString:@""])
         return;
     
+    if ([self.uiEncryptTextField isFirstResponder])
+        [self.uiEncryptTextField resignFirstResponder];
+    
     NSLog(@"Plain Text : %@", self.uiEncryptTextField.text);
     
     NSError *error;
@@ -69,24 +74,54 @@
                                                                 salt:&salt
                                                             andError:&error];
     
-    NSLog(@"Encrypted Data : %@/n/n/nIV : %@/n/n/nSalt : %@/n/n/nError : %@", _encryptedData, iv, salt, error);
+    NSLog(@"Encrypted Data : %@\nIV : %@\nSalt : %@\nError : %@", _encryptedData, iv, salt, error);
     
-    error = nil;
-    
-    NSData *_decryptedData = [CryptManager decryptedDataForData:_encryptedData
-                                           initializationVector:iv
-                                                           salt:salt
-                                                       andError:&error];
-    
-    NSLog(@"Decrypted Data : %@/n/n/nIV : %@/n/n/nSalt : %@/n/n/nError : %@", _decryptedData, iv, salt, error);
-    
-    NSString *_string = [[NSString alloc] initWithData:_decryptedData encoding:NSUTF8StringEncoding];
-    NSLog(@"Plain String : %@", _string);
+    [[DatabaseManager sharedManager] addCryptToDatabaseWithEncryptedData:_encryptedData
+                                                    initializationVector:iv
+                                                                    salt:salt];
+    self.uiEncryptTextField.text = @"";
 }
 
 - (IBAction)decryptButtonClicked:(UIButton *)sender;
 {
+    if ([self.uiDecryptTextField isFirstResponder])
+        [self.uiDecryptTextField resignFirstResponder];
     
+    NSError *error;
+    
+    Crypt *_crypt = [[DatabaseManager sharedManager] cryptFromDatabase];
+    
+    if (!_crypt) {
+        UIAlertView *_alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Nothing to decrypt" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [_alertView show];
+        return;
+    }
+    
+    NSData *_decryptedData = [CryptManager decryptedDataForData:_crypt.encryptedData
+                                           initializationVector:_crypt.initializationVector
+                                                           salt:_crypt.salt
+                                                       andError:&error];
+    
+    NSLog(@"Decrypted Data : %@\nIV : %@\nSalt : %@\nError : %@", _decryptedData, _crypt.initializationVector, _crypt.salt, error);
+    
+    [[DatabaseManager sharedManager] deleteCryptFromDatabase:_crypt];
+    
+    NSString *_string = [[NSString alloc] initWithData:_decryptedData encoding:NSUTF8StringEncoding];
+    NSLog(@"Plain String : %@", _string);
+    
+    self.uiDecryptTextField.text = _string;
+}
+
+#pragma mark - UITextField Delegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if ([self.uiDecryptTextField isFirstResponder])
+        [self.uiDecryptTextField resignFirstResponder];
+    else if ([self.uiEncryptTextField isFirstResponder])
+        [self.uiEncryptTextField resignFirstResponder];
+    
+    return YES;
 }
 
 @end

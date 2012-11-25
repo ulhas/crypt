@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+#define CRYPT_ENTITY_NAME @"Crypt"
 
 @interface Crypt : NSManagedObject
 

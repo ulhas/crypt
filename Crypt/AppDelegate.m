@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CryptTestViewController.h"
+#import "DatabaseManager.h"
 
 @interface AppDelegate ()
 
@@ -62,6 +63,8 @@
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
+    
+    [DatabaseManager sharedManager].managedObjectContext = self.managedObjectContext;
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

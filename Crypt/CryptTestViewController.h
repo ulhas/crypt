@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CryptTestViewController : UIViewController
+@interface CryptTestViewController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic, strong) IBOutlet UITextField *uiEncryptTextField;
 @property (nonatomic, strong) IBOutlet UITextField *uiDecryptTextField;
