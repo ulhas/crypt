@@ -11,9 +11,9 @@
 #import <CommonCrypto/CommonCryptor.h>
 #import <CommonCrypto/CommonKeyDerivation.h>
 
-static NSString *test = @"testPassword";
+static NSString *password = @"IQO!}^ojx$TdID(n";
 
-NSString * const kCryptManagerErrorDomain = @"com.test.crypt";
+static const NSString *kCryptManagerErrorDomain = @"com.test.crypt";
 
 const CCAlgorithm kAlgorithm = kCCAlgorithmAES128;
 const NSUInteger kAlgorithmKeySize = kCCKeySizeAES128;
@@ -75,7 +75,7 @@ const NSUInteger kPBKDFRounds = 10000;
     *iv = [self randomDataOfLength:kAlgorithmIVSize];
     *salt = [self randomDataOfLength:kPBKDFSaltSize];
     
-    NSData *key = [self AESKeyForPassword:test salt:*salt];
+    NSData *key = [self AESKeyForPassword:password salt:*salt];
     
     size_t outLength;
     NSMutableData *
@@ -115,7 +115,7 @@ const NSUInteger kPBKDFRounds = 10000;
                             salt:(NSData *)salt
                         andError:(NSError **)error {
     
-    NSData *key = [self AESKeyForPassword:test salt:salt];
+    NSData *key = [self AESKeyForPassword:password salt:salt];
     
     size_t outLength;
     NSMutableData *
