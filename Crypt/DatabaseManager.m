@@ -8,6 +8,7 @@
 
 #import "DatabaseManager.h"
 #import "Crypt.h"
+#import "AppDelegate.h"
 
 static DatabaseManager *_sharedManager = nil;
 
@@ -23,6 +24,12 @@ static DatabaseManager *_sharedManager = nil;
     }
     
     return _sharedManager;
+}
+
+- (void)saveContext
+{
+    AppDelegate *_appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [_appDelegate saveContext];
 }
 
 #pragma mark - Crypt Methods

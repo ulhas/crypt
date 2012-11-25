@@ -79,6 +79,7 @@
     [[DatabaseManager sharedManager] addCryptToDatabaseWithEncryptedData:_encryptedData
                                                     initializationVector:iv
                                                                     salt:salt];
+    [[DatabaseManager sharedManager] saveContext]; //optional
     self.uiEncryptTextField.text = @"";
 }
 
@@ -105,6 +106,7 @@
     NSLog(@"Decrypted Data : %@\nIV : %@\nSalt : %@\nError : %@", _decryptedData, _crypt.initializationVector, _crypt.salt, error);
     
     [[DatabaseManager sharedManager] deleteCryptFromDatabase:_crypt];
+    [[DatabaseManager sharedManager] saveContext]; //optional
     
     NSString *_string = [[NSString alloc] initWithData:_decryptedData encoding:NSUTF8StringEncoding];
     NSLog(@"Plain String : %@", _string);

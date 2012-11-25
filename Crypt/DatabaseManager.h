@@ -22,4 +22,6 @@
 - (Crypt *)cryptFromDatabase;
 - (void)deleteCryptFromDatabase:(Crypt *)crypt;
 
+- (void)saveContext;
+
 @end
